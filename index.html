@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/cv_Nora/estilos/cv_estilos.css"/>
+    <title>Curriculum Vitae</title>
+</head>
+<body>
+ 
+<!--Menu de navegacion -->
+  <header>
+    <div class="logo" id="titulop">Curriculum Vitae online</div>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Datos Personales</a>
+        </li>
+        <li>
+          <a href="#experiencia">Experiencia Laboral </a>
+        </li>
+        <li>
+          <a href="#habilidades">Habilidades</a>
+        </li>
+        <li>
+          <a href="#resultado_datos">Curriculum Vitae</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+<!--Menu de navegacion -->
+
+    <form id="formulario" method="get">
+      <section class="seccion">
+        <h3>Datos Personales</h3>
+            <h5>Ingrese los datos personales  y de contacto</h5>
+            
+              <div class="centrar-boton">
+                <label for="foto">SUBIR FOTO DE PERFIL</Label>
+                <img src="/cv_Nora/imagenes/foto_perfil.jpg" id="foto">
+
+                <input type="file" id="archivo" name="archivo">
+              </div> 
+
+              <label for="name">NOMBRE Y APELLIDO</label>
+              <input type="text" class="entrada" id="name" name="user_name" required>
+              
+              <label for="titulo">TITULO</label>
+              <input type="email" class="entrada" id="titulo" name="title" required>
+            
+              <label for="mail">CORREO ELECTRONICO</label>
+              <input type="email" class="entrada" id="mail" name="user_mail" required>
+
+              <label for="telefono">TELEFONO</label>
+              <input type="tel" class="entrada" id="telefono" name="telefone"></input>
+
+              <label for="celular">CELULAR</label>
+              <input type="tel" class="entrada" id="celular" name="movil"></input>
+
+              <label for="direccion">DIRECCION</label>
+              <input type="text" class="entrada" id="direccion" name="adress"></input>
+
+              <label for="cpostal">CODIGO POSTAL</label>
+              <input type="text" id="cpostal" class="entrada" name="zipcode"></input>
+
+              <label for="localidad">LOCALIDAD</label>
+              <input type="text" id="localidad" class="entrada" name="city"></input>
+
+              <label for="fec_nac">FECHA DE NACIMIENTO</label>
+              <input type="date" id="fec_nac" name="birthday_date"></input></br>
+
+              <label for="ciudad_nac">CIUDAD DE NACIMIENTO</label>
+              <input type="text" id="ciudad_nac"  class="entrada"name="birthday_city"></input>
+
+              <label>GENERO</label><br>
+               <input type="radio" id="femenino" name="genero" value="Femenino">
+               <label for="femenino">Femenino</label><br>
+               <input type="radio" id="masculino" name="genero" value="Masculino">
+               <label for="masculino">Masculino</label><br>
+               <input type="radio" id="otro" name="genero" value="Otro">
+               <label for="otro">Otro</label><br><br>
+
+              <label for="nacionalidad">NACIONALIDAD</label>
+              <input type="text" id="nacionalidad" class="entrada"  name="nac"></input>
+
+              <label>ESTADO CIVIL</label><br>
+               <input type="radio" id="soltero" name="estado" value="Soltero">
+               <label for="soltero">Soltero</label><br>
+               <input type="radio" id="casado" name="estado" value="Casado">
+               <label for="casado">Casado</label><br>
+               <input type="radio" id="viudo" name="estado" value="Viudo">
+               <label for="viudo">Viudo</label><br>
+               <input type="radio" id="divorciado" name="estado" value="Divorciado">
+               <label for="divorciado">Divorciado</label><br><br>
+
+              <label for="sitioweb">SITIO WEB</label>
+              <input type="url" id="sitioweb" class="entrada"  name="website"></input>
+
+      </section>
+      <div id="experiencia"></div>
+
+      <section class="seccion">
+        <h3>Experiencia Laboral</h3>
+        <h5>Ingrese la informacion del último empleo que haya tenido</h5>
+          <article id="primera_exp" class="articulo">
+              <label for="puesto">PUESTO</label>
+              <input type="text" class="entrada_art" id="puesto" name="job">
+              
+              <label for="empleador">EMPLEADOR</label>
+              <input type="text" class="entrada_art" id="empleador" name="employer">
+            
+              <label for="local_job">LOCALIDAD</label>
+              <input type="text" class="entrada_art" id="local_job" name="city_job">
+
+              <label for="fec_inicio">FECHA DE INICIO</label>
+              <input type="date" id="fec_inicio" name="begin_date"></input>
+
+              <label for="fec_fin">FECHA DE FIN</label>
+              <input type="date" id="fec_fin" name="finish_date"></input></br>
+
+              <label for="descripcion">DESCRIPCION</label>
+              <textarea id="descripcion" class="texto_largo" name="desc" cols="75" rows="5"></textarea>
+          </article>
+
+          <!--La idea es que haya hasta 3 posibilidades de cargar exoeriencia laboral-->
+          <!-- Pero no supe bien como guardar la informacion sin repetir código-->
+
+          <!--<p class="centrar-boton">
+            <button type="button" id="siguiente2" class="btn btn-color">+ Experiencia</button>
+          </p>
+
+          <article class="articulo" id="segunda_exp" style="display:none;">
+            <label for="puesto">PUESTO</label>
+            <input type="text" class="entrada_art" id="puesto" name="job">
+            
+            <label for="empleador">EMPLEADOR</label>
+            <input type="text" class="entrada_art" id="empleador" name="employer">
+          
+            <label for="local_job">LOCALIDAD</label>
+            <input type="text" class="entrada_art" id="local_job" name="city_job">
+
+            <label for="fec_inicio">FECHA DE INICIO</label>
+            <input type="date" id="fec_inicio" name="begin_date"></input>
+
+            <label for="fec_fin">FECHA DE FIN</label>
+            <input type="date" id="fec_fin" name="finish_date"></input></br>
+
+            <label for="descripcion">DESCRIPCION</label>
+            <textarea class="texto_largo" name="desc" cols="75" rows="5"></textarea>
+        </article>
+        <p id="botonera1" class="centrar-boton">
+          <button type="button" id="cancelar2" class="btn btn-color" style="display:none;">Cancelar</button>
+          <button type="button" id="siguiente3" class="btn btn-color" style="display:none;">+ Experiencia</button>
+        </p>
+
+        <article class="articulo" id="tercera_exp" style="display:none;">
+          <label for="puesto">PUESTO</label>
+          <input type="text" class="entrada_art" id="puesto" name="job">
+          
+          <label for="empleador">EMPLEADOR</label>
+          <input type="text" class="entrada_art" id="empleador" name="employer">
+        
+          <label for="local_job">LOCALIDAD</label>
+          <input type="text" class="entrada_art" id="local_job" name="city_job">
+
+          <label for="fec_inicio">FECHA DE INICIO</label>
+          <input type="date" id="fec_inicio" name="begin_date"></input>
+
+          <label for="fec_fin">FECHA DE FIN</label>
+          <input type="date" id="fec_fin" name="finish_date"></input></br>
+
+          <label for="descripcion">DESCRIPCION</label>
+          <textarea class="texto_largo" name="desc" cols="75" rows="5"></textarea>
+        </article>  
+        <p id="botonera2" class="centrar-boton">
+          <button type="button" id="cancelar3" class="btn btn-color" style="display:none;">Cancelar</button>
+        </p>-->
+      </section>
+
+      <div id="habilidades"></div>
+      <section class="seccion">
+        <h3>Habilidades</h3>
+        <h5>Elija las habilidades mas importantes que demuestren su talento para el puesto al que se postula</h5>
+          <article class="articulo">
+              <label><input type="checkbox" id="habil1" >Manejo de tiempo</label><br>
+              <label><input type="checkbox" id="habil2" >En Comunicaciones</label><br>
+              <label><input type="checkbox" id="habil3" >Organizativas</label><br>
+              <label><input type="checkbox" id="habil4" >De Liderazgo</label><br>
+              <label><input type="checkbox" id="habil5" >De pensamiento crítico</label><br>
+              <label><input type="checkbox" id="habil6" >Técnicas</label><br>
+              <label><input type="checkbox" id="habil7" >Atención a los detalles</label><br>
+              <label><input type="checkbox" id="habil8" >Otras</label><br>
+              <label for="desc_habil">DESCRIBIR (otras habilidades o aclarar lo que considere necesario)</label>
+              <textarea id="desc_habil" class="texto_largo"  cols="75" rows="5"></textarea>
+          </article>
+          <p class="centrar-boton">
+            <button type="button" id="enviar_datos" class="btn btn-color">Enviar Datos</button>
+          </p>
+      </section>    
+    </form>
+<br>
+<br>
+    
+    <section id="resultado_datos" style="display:none;">
+
+      <p id="final_nomyape"></p>
+      <hr class="linea">
+      <p id="final_titulo"></p>
+      <p class="titulos">Informacion de Contacto y Datos Personales</p>
+      <hr class="linea_larga">
+      <ul>
+        <li><p class="datos" id="final_email"></p></li>
+        <li><p class="datos" id="final_telefono"></p></li>
+        <li><p class="datos" id="final_celular"></p></li>
+        <li><p class="datos" id="final_direccion"></p></li>
+        <li><p class="datos" id="final_cpostal"></p></li>
+        <li><p class="datos" id="final_localidad"></p></li>
+        <li><p class="datos" id="final_fecha_nac"></p></li>
+        <li><p class="datos" id="final_ciudad_nac"></p></li>
+        <li><p class="datos" id="final_genero"></p></li>
+        <li><p class="datos" id="final_nacionalidad"></p></li>
+        <li><p class="datos" id="final_civil"></p></li>
+        <li><p class="datos" id="final_web"></p></li>
+      </ul>
+
+      <p class="titulos">Antecedentes laborales</p>
+      <hr class="linea_larga">
+      </br>
+      <div id="texto-izq" class="caja">
+        <p class="datos" id="final_puesto"></p>
+        <p class="datos" id="final_empleador"></p>
+        <p class="datos" id="final_localjob"></p>
+      </div>
+      <div id="texto-der" class="caja">
+        <p class="datos" id="final_inicio"></p>
+        <p class="datos" id="final_fin"></p>
+      </div>
+      <div><p class="datos" id="final_descripcion"</p></div>
+
+      <p class="titulos">Habilidades</p>
+      <hr class="linea_larga">
+      </br>
+        <p class="datos"  id="final_habil1" style="display:none;">Manejo de tiempo</p>
+        <p class="datos"  id="final_habil2" style="display:none;">En Comunicaciones</p>
+        <p class="datos"  id="final_habil3" style="display:none;">Organizativas</p>
+        <p class="datos"  id="final_habil4" style="display:none;">De Liderazgo</p>
+        <p class="datos"  id="final_habil5" style="display:none;">De pensamiento crítico</p>
+        <p class="datos"  id="final_habil6" style="display:none;">Técnicas</p>
+        <p class="datos"  id="final_habil7" style="display:none;">Atención a los detalles</p>
+        <p class="datos"  id="final_habil8" style="display:none;">Otras</p>
+        <div><p class="datos" id="final_habil"</p></div>
+      
+
+    </section>
+
+    <script src="/cv_Nora/js/cv_enviar_datos.js"></script>
+</body>
+</html>
